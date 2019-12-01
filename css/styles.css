@@ -38,4 +38,20 @@ footer {
     margin:auto,
 
   }
+
+  .gw-connected{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+  }
+
+  .gw-disconnected{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+  }
   

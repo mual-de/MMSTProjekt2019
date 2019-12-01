@@ -9,7 +9,7 @@
 
 <body>
     <nav>
-        <div class="w3-bar w3-black">
+        <div class="w3-bar w3-blue">
             <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
             <a href="showDevices.html" class="w3-bar-item w3-button w3-mobile">Gateways</a>
             <a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>
@@ -18,12 +18,13 @@
     </nav>
     <article class="w3-container w3-cell-middle">
         <h2>Übersicht über die Gateways</h2>
-        
-        <table class="w3-table-all">
-            <tr><th>Id</th><th>Alias</th><th>Ablaufdatum</th><th>Zertifikat erneuern</th></tr>
-            <tr><td>0</td><td>Demo Gateway 1</td><td>2020-01-20</td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td></tr>
-
+        <div class="w3-responsive">
+        <table class="w3-table-all w3-hoverable">
+            <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat erneuern</th><th>Ablaufdatum</th></tr>
+            <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
+            <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
         </table>
+    </div>
     </article>
     <footer >
         MMST Projekt 2019 - Gruppe 2.2
