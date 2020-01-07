@@ -1,25 +1,174 @@
 <head>
-    <title>Demostartseite</title>
+    <title>VPN Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <!-- Icons von FontAwesome -->
+    <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
 </head>
 
 
-<body>
+<body class="">
     <nav>
         <div class="w3-bar w3-blue">
         <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
         <a href="showDevices.html" class="w3-bar-item w3-button w3-mobile">Gateways</a>
-        <a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Einstellungen</a>
         <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Login</a>
       </div>
-    </nav>
-    <article class="w3-container w3-cell-middle">
+    </nav>        
+
+<!-- Inhalt -->
+<div class="w3-main" style="margin:100px">
+
+    
+    <article class="w3-container w3-cell-middle w3-margin">
         <h2>Willkommen</h2>
         Dies ist eine Demostartseite, siehe <a href="https://www.w3schools.com/w3css/default.asp" class="w3-button w3-black"> w3css</a> für weitere Informationen.
     </article>
+    
+    
+    <!-- konfigurierte Schaltflaechen 1-->
+    
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+            <div class="w3-blue w3-hover-shadow w3-center">
+                <div class="w3-container w3-blue-grey w3-right">
+                    <!-- Löschen -->
+                    <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                    <!-- Bearbeiten -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <h3>Ausstehende Anfragen</h3>
+                <p>Kurze Beschreibung oder gewählte Einstellungen oder irgendwie sowas, mal sehen was uns da noch einfällt oder Sinn ergibt. 
+                    Wenn wir Filter einstellen könnnte man die kurz darstellen, vielleicht schön mit Icons aus der Tabelle</p>
+            </div> 
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+            <div class="w3-blue w3-hover-shadow w3-center">
+                <div class="w3-container w3-blue-grey w3-right">
+                    <!-- Löschen -->
+                    <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                    <!-- Bearbeiten -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <h3>Firma X</h3>
+                <p>Kurze Beschreibung oder gewählte Einstellungen oder irgendwie sowas, mal sehen was uns da noch einfällt oder Sinn ergibt. 
+                    Wenn wir Filter einstellen könnnte man die kurz darstellen, vielleicht schön mit Icons aus der Tabelle</p>
+            </div> 
+        </div>
+        <div class="w3-third w3-container">
+            <div class="w3-blue w3-hover-shadow w3-center">
+                <div class="w3-container w3-blue-grey w3-right">
+                    <!-- Löschen -->
+                    <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                    <!-- Bearbeiten -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <h3>Alias B</h3>
+                <p>Vielleicht auch Bilder ?</p>
+            </div> 
+        </div>
+    </div>
+
+    <!-- konfigurierte Schaltflaechen 2-->
+    
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+            <div class="w3-blue w3-hover-shadow w3-center">
+                <div class="w3-container w3-blue-grey w3-right">
+                    <!-- Löschen -->
+                    <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                    <!-- Bearbeiten -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <h3>Firma 0815</h3>
+                <p>Kurze Beschreibung oder gewählte Einstellungen oder irgendwie sowas, mal sehen was uns da noch einfällt oder Sinn ergibt. 
+                    Wenn wir Filter einstellen könnnte man die kurz darstellen, vielleicht schön mit Icons aus der Tabelle</p>
+            </div> 
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+            <div class="w3-blue w3-hover-shadow w3-center">
+                <div class="w3-container w3-blue-grey w3-right">
+                    <!-- Löschen -->
+                    <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                    <!-- Bearbeiten -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <h3>Ablaufdatum Z</h3>
+                <p>Kurze Beschreibung oder gewählte Einstellungen oder irgendwie sowas, mal sehen was uns da noch einfällt oder Sinn ergibt. 
+                    Wenn wir Filter einstellen könnnte man die kurz darstellen, vielleicht schön mit Icons aus der Tabelle</p>
+            </div> 
+        </div>
+
+        <!-- Hinzufügen-Button-->
+        <div class="w3-third w3-container w3-center">
+            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-circle w3-large w3-blue">+</button>
+        </div>
+    </div> 
+
+
+    <!-- Bearbeiten-Fenster -->
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Filter Bearbeiten</h3>
+        <p>Hier müssen wir nochmal überlegen welche Filter es genau geben soll (muss konsistent mit Tabelle sein), vermutlich eher drop-down als freier Text.</p>
+        <h4>Filter</h4>
+        <fieldset class="fs-centered">
+            <form>
+            <label for="Alias" > Alias:</label> <br>
+            <input type="text" id="username" class="w3-input" > <br>
+            </form>
+            <p>Verbindungsstatus</p>
+            <input class="w3-radio" type="radio" name="connection" value="male" checked>
+            <label>Verbunden</label>
+            <input class="w3-radio" type="radio" name="connection" value="female">
+            <label>Getrennt</label>
+
+
+        </fieldset>
+        <div class= "w3-container w3-margin-top">
+            <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
+            <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-right w3-blue">Übernehmen</button>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- neuer Shortcut-Fenster -->
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Filter Anlegen</h3>
+        <p>Hier müssen wir nochmal überlegen welche Filter es genau geben soll (muss konsistent mit Tabelle sein), vermutlich eher drop-down als freier Text.</p>
+        <h4>Filter</h4>
+        <fieldset class="fs-centered">
+            <form>
+            <label for="Alias" > Alias:</label> <br>
+            <input type="text" id="username" class="w3-input" > <br>
+            </form>
+            <p>Verbindungsstatus</p>
+            <input class="w3-radio" type="radio" name="connection" value="male" checked>
+            <label>Verbunden</label>
+            <input class="w3-radio" type="radio" name="connection" value="female">
+            <label>Getrennt</label>
+
+
+        </fieldset>
+        <div class= "w3-container w3-margin-top">
+            <button onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
+            <button onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-right w3-blue">Anlegen</button>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>    
+
     <footer >
         MMST Projekt 2019 - Gruppe 2.2
     </footer>

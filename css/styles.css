@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+/*
 body {
   display: grid;
   grid-template-columns: 2fr minmax(20em, 100em) 1fr;
@@ -9,10 +10,14 @@ body {
   min-height: 100vh;
   background-color: white;
 }
+*/
+
+
 article {
   grid-row: 2;
   grid-column: 2;
 }
+
 
 nav {
   overflow: hidden;
