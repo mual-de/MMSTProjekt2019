@@ -29,7 +29,7 @@
         <h2>Übersicht über die Gateways</h2>
         <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         <div class="w3-responsive">
-        <table class="w3-table-all">
+        <table class="w3-table-all" onload="getRows()">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
             <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button w3-border" >konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2020-02-15</button></td></tr>
             <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button w3-border">konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen</button></td></tr>
