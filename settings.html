@@ -1,0 +1,62 @@
+<head>
+    <title>Kontoeinstellungen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <!-- Icons von FontAwesome -->
+    <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <nav>
+      <div class="w3-bar w3-blue">
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="showDevices.html" class="w3-bar-item w3-button w3-mobile">Gateways</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Einstellungen</a>
+        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Login</a>
+		<a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
+      </div>
+    </nav>  
+    <article class="w3-margin">
+        <h2>Kontoeinstellungen</h2>
+        <fieldset class="fs-centered">
+            <form>
+            <label for="username" > Username:</label>
+			<label> Max Mustermann</label> <br>
+			<label for="email" > Email address:</label>
+			<label> max.mustermann@gmx.de</label> <br>
+            <label for="password" class="w3-label">Password:</label> <br>
+            <button onclick="document.getElementById('id03').style.display='block'"> modify </Button> <br>
+            </form>
+        </fieldset>
+    </article>
+	
+	<!-- neuer Shortcut-Fenster -->
+  <div id="id03" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id03').style.display='none'" >&times;</span>
+        <h2>Konto bearbeiten</h2>
+		<p>Hier können Kontodetails bearbeitet werden.</p>
+        <fieldset class="fs-centered">
+            <form>
+            <label for="username" > Username:</label> <br>
+            <input type="text" id="username" class="w3-input" > <br>
+            <label for="email" class="w3-label"> Email address:</label> <br>
+            <input type="email" class="w3-input" ><br>
+            </form>
+        </fieldset>
+        <div class= "w3-container w3-margin-top">
+            <button onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
+            <button onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-right w3-blue">Übernehmen</button>         
+        </div>
+      </div>
+    </div>
+  </div>
+	
+    <footer >
+        MMST Projekt 2019 - Gruppe 2.2
+    </footer>
+</body>
