@@ -12,6 +12,6 @@ jobs:
         FTP_SERVER: files.000webhost.com
         FTP_USERNAME: demommst2020
         FTP_PASSWORD: demo_tud_2020
-        LOCAL_DIR: public_html
+        REMOTE_DIR: public_html
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
