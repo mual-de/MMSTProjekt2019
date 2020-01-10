@@ -16,20 +16,39 @@
             <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
             <a href="showDevices.html" class="w3-bar-item w3-button w3-mobile">Gateways</a>
             <a href="#" class="w3-bar-item w3-button w3-mobile">Einstellungen</a>
-            <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Login</a>
+            <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+            <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
       </div>
     </nav>
-    <article class="w3-container w3-cell-middle w3-margin">
+
+
+<!-- Inhalt -->
+<div class="w3-main" style="margin:50px">   
+
+    <div class="w3-container w3-margin">
         <h2>Übersicht über die Gateways</h2>
+        <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         <div class="w3-responsive">
+<<<<<<< HEAD
         <table class="w3-table-all w3-hoverable" onload="getRows()">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat erneuern</th><th>Ablaufdatum</th></tr>
             <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
             <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
+=======
+        <table class="w3-table-all">
+            <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
+            <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button w3-border" >konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2020-02-15</button></td></tr>
+            <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button w3-border">konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen</button></td></tr>
+            <tr><td>3</td><td><div class="gw-connected"></div></td><td>Demo Gateway 3</td><td><button class="w3-button w3-border" >konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2020-08-10</button></td></tr>
+            <tr><td>4</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 4</td><td><button class="w3-button w3-border">konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2021-01-01</button></td></tr>
+            <tr><td>5</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 5</td><td><button class="w3-button w3-border">konfigurieren</button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen</button></td></tr>
+>>>>>>> Login verlinkt auf index
         </table>
+        </div>
     </div>
-    </article>
-    <footer >
+</div>
+
+    <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
     <script>

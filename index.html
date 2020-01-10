@@ -15,19 +15,36 @@
         <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
         <a href="showDevices.html" class="w3-bar-item w3-button w3-mobile">Gateways</a>
         <a href="#" class="w3-bar-item w3-button w3-mobile">Einstellungen</a>
-        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Login</a>
+        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+        <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
       </div>
     </nav>        
 
 <!-- Inhalt -->
-<div class="w3-main" style="margin:100px">
+<div class="w3-main" style="margin:50px">
 
-    
+    <!--
     <article class="w3-container w3-cell-middle w3-margin">
         <h2>Willkommen</h2>
         Dies ist eine Demostartseite, siehe <a href="https://www.w3schools.com/w3css/default.asp" class="w3-button w3-black"> w3css</a> für weitere Informationen.
     </article>
-    
+    -->
+
+    <div class="w3-panel w3-red w3-display-container w3-large" id="warning">
+        <span onclick="document.getElementById('warning').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <div onclick="location.href='showDevices.html';"> 
+            <h3><i class="fas fa-calendar-times"></i> Warnung!</h3>
+            <p>Die Zertifikate der Geräte: ID-Liste, laufen demnächst aus.</p>
+        </div>
+    </div>  <div class="w3-panel w3-green w3-display-container w3-large" id="info">
+        <span onclick="document.getElementById('info').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <div onclick="location.href='showDevices.html';"> 
+            <h3><i class="fas fa-bell"></i> Information</h3>
+            <p>Seit dem letzten Login haben sich neue Geräte im System angemeldet.</p>
+        </div>
+    </div>
+
+
     
     <!-- konfigurierte Schaltflaechen 1-->
     
@@ -40,9 +57,22 @@
                     <!-- Bearbeiten -->
                     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
                 </div>
-                <h3>Ausstehende Anfragen</h3>
-                <p>Kurze Beschreibung oder gewählte Einstellungen oder irgendwie sowas, mal sehen was uns da noch einfällt oder Sinn ergibt. 
-                    Wenn wir Filter einstellen könnnte man die kurz darstellen, vielleicht schön mit Icons aus der Tabelle</p>
+                <div onclick="location.href='showDevices.html';">
+                    <h2>Ausstehende Anfragen</h2>
+                    <div class="w3-row w3-padding"> 
+                        <div class="w3-col s6">
+                            <p> Alias: <i class="fas fa-minus"></i></p>
+                            <p> Status: <i class="gw-disconnected"></i> </p>
+                            <p> Zertifikat: <i class="fas fa-times"></i></p>
+                        </div>
+                        <div class="w3-col s6">
+                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-times"></i></p>
+                            <p> ID: <i class="fas fa-minus"></i></p>
+                            <p> <i class="fas fa-ship"></i> Port: <i class="fas fa-times"></i></p>
+                            <p> IP: <i class="fas fa-times"></i></p>
+                        </div>
+                    </div>
+                </div>
             </div> 
         </div>
         <div class="w3-third w3-container w3-margin-bottom">
@@ -169,7 +199,7 @@
 
 </div>    
 
-    <footer >
+    <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
 </body>
