@@ -9,8 +9,8 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-        FTP_SERVER: alfa3009.alfahosting-server.de
-        FTP_USERNAME: web29445279f2
-        FTP_PASSWORD: demo_mmst
+        FTP_SERVER: files.000webhost.com
+        FTP_USERNAME: demommst2020
+        FTP_PASSWORD: demo_tud_2020
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
