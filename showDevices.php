@@ -26,7 +26,7 @@
             <?php
                 if($db = sqlite_open("db/db.sqlite",0666,$sqliteerror)){
                     $result = sqlite_query($db, "SELECT * FROM gateways");
-                    while($entry = sqlite_fetch_array($result, SQLITE_ASSOC){
+                    while($entry = sqlite_fetch_array($result, SQLITE_ASSOC)){
                         $state ="gw-disconnected";
                         if ($entry['state'] == 1){
                             $state = "gw-connected";
