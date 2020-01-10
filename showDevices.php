@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/w3.css">
     <!-- Icons von FontAwesome -->
     <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
-    <script src="js/database.js" type="text/javascript"></script>
 </head>
 
 
@@ -22,8 +21,23 @@
     <article class="w3-container w3-cell-middle w3-margin">
         <h2>Übersicht über die Gateways</h2>
         <div class="w3-responsive">
-        <table class="w3-table-all w3-hoverable" onload="getRows()">
+        <table class="w3-table-all w3-hoverable">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat erneuern</th><th>Ablaufdatum</th></tr>
+            <?php
+                if($db = sqlite_open("db/db.sqlite",0666,$sqliteerror)){
+                    $result = sqlite_query($db, "SELECT * FROM gateways");
+                    while($entry = sqlite_fetch_array($result, SQLITE_ASSOC){
+                        $state ="gw-disconnected";
+                        if ($entry['state'] == 1){
+                            $state = "gw-connected";
+                        }
+                        echo '<tr><td>'.$entry["id"].'</td><td><div class="'.$state'."></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>';
+                    }
+
+                }else{
+                    die($sqliteerror);
+                }
+            ?>
             <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
             <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
         </table>
