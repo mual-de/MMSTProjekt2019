@@ -28,8 +28,7 @@
                     if ($mysqli->connect_errno) {
                         die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
                     }
-                    $query = "SELECT * FROM gateways";
-                    $result = sqlite_query($db, "SELECT * FROM gateways");
+                    $query = "SELECT * FROM id12194802_mmst.gateways";
                     if ($result = $mysqli->query($query)) {
 
                         /* fetch object array */
