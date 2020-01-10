@@ -24,19 +24,28 @@
         <table class="w3-table-all w3-hoverable">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat erneuern</th><th>Ablaufdatum</th></tr>
             <?php
-                if($db = sqlite_open("db/db.sqlite",0666,$sqliteerror)){
+                    $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
+                    if ($mysqli->connect_errno) {
+                        die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
+                    }
+                    $query = "SELECT * FROM gateways";
                     $result = sqlite_query($db, "SELECT * FROM gateways");
-                    while($entry = sqlite_fetch_array($result, SQLITE_ASSOC)){
-                        $state ="gw-disconnected";
-                        if ($entry['state'] == 1){
-                            $state = "gw-connected";
+                    if ($result = $mysqli->query($query)) {
+
+                        /* fetch object array */
+                        while ($entry = $result->fetch_row()) {
+                            $state ="gw-disconnected";
+                            if ($entry['state'] == 1){
+                                $state = "gw-connected";
+                            }
+                            echo '<tr><td>'.$entry["id"].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>'; 
                         }
-                        echo '<tr><td>'.$entry["id"].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>';
+                    
+                        /* free result set */
+                        $result->close();
                     }
 
-                }else{
-                    die($sqliteerror);
-                }
+                
             ?>
             <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
             <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
