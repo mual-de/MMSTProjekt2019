@@ -31,7 +31,7 @@
                         if ($entry['state'] == 1){
                             $state = "gw-connected";
                         }
-                        echo '<tr><td>'.$entry["id"].'</td><td><div class="'.$state'."></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>';
+                        echo '<tr><td>'.$entry["id"].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>';
                     }
 
                 }else{
