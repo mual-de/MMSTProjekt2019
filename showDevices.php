@@ -32,8 +32,8 @@
                     if ($result = $mysqli->query($query)) {
 
                         /* fetch object array */
-                        while ($entry = $result->fetch_row()) {
-                            echo $entry;
+                        while ($entry = $result->fetch_assoc()) {
+                            echo $entry['id'];
                             $state ="gw-disconnected";
                             if ($entry['state'] == 1){
                                 $state = "gw-connected";
