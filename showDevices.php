@@ -34,6 +34,7 @@
 
                         /* fetch object array */
                         while ($entry = $result->fetch_row()) {
+                            echo $entry;
                             $state ="gw-disconnected";
                             if ($entry['state'] == 1){
                                 $state = "gw-connected";
