@@ -49,13 +49,16 @@
                     }
                     if(isset($_GET['state'])){
                         if($_GET['state'] != "-1"){
+                            if($filter_active){
+                                $where_select = $where_select. " AND ";
+                            }
                             $filter_active = true;
-                            $where_select = $where_select." AND state='".$_GET['state']."'";
+                            $where_select = $where_select." state='".$_GET['state']."'";
                         }
                     }
                     $query = "SELECT * FROM id12194802_mmst.gateways";
                     if($filter_active){
-                        $query = $query.'WHERE '.$where_select;
+                        $query = $query.' WHERE '.$where_select;
                     }
                     echo $query;
                     if ($result = $mysqli->query($query)) {
