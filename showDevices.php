@@ -44,11 +44,11 @@
                     if(isset($_GET['alias'])){
                         if($_GET['alias'] != ''){
                             $filter_active = true;
-                            $where_select = "alias='".$_GET['alias']."'";
+                            $where_select = "alias LIKE'".$_GET['alias']."'";
                         }
                     }
                     if(isset($_GET['state'])){
-                        if($_GET['state'] != "-1"){
+                        if($_GET['state'] != "-1" && $_GET['state'] != ""){
                             if($filter_active){
                                 $where_select = $where_select. " AND ";
                             }
