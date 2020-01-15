@@ -20,6 +20,15 @@
     </nav>
     <article class="w3-container w3-cell-middle w3-margin">
         <h2>Übersicht über die Gateways</h2>
+        <form action="showDevices.php" method="get">
+            <fieldset>
+                <legend>Filtern der Datenbank</legend>
+                Alias: <input type="text" name="alias"><br>
+                Status: <input type="number" min="-1" max ="1" default="-1" name="state"><br>
+                <input type="submit" value="Filtern">
+
+            </fieldset>
+        </form>
         <div class="w3-responsive">
         <table class="w3-table-all w3-hoverable">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
@@ -33,7 +42,6 @@
 
                         /* fetch object array */
                         while ($entry = $result->fetch_assoc()) {
-                            echo $entry['id'];
                             $state ="gw-disconnected";
                             if ($entry['state'] == 1){
                                 $state = "gw-connected";
@@ -42,7 +50,7 @@
                            
                             
                             if($entry['cert-date']<time()){
-                               echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> '. date('Y-m-d hh:mm', $entry['cert-date']) .'</button></td>';
+                               echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> '. date('Y-m-d h:m', $entry['cert-date']) .'</button></td>';
                             }else{
                                 echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen </button></td>';
                             }
@@ -56,8 +64,6 @@
 
                 
             ?>
-            <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
-            <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>
         </table>
     </div>
     </article>
