@@ -145,19 +145,58 @@
       <div class="w3-container">
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         <h3>Filter Bearbeiten</h3>
-        <p>Hier müssen wir nochmal überlegen welche Filter es genau geben soll (muss konsistent mit Tabelle sein), vermutlich eher drop-down als freier Text.</p>
-        <h4>Filter</h4>
+        <!--<h4>Filter</h4>-->
         <fieldset class="fs-centered">
             <form>
-            <label for="Alias" > Alias:</label> <br>
-            <input type="text" id="username" class="w3-input" > <br>
-            </form>
-            <p>Verbindungsstatus</p>
-            <input class="w3-radio" type="radio" name="connection" value="male" checked>
-            <label>Verbunden</label>
-            <input class="w3-radio" type="radio" name="connection" value="female">
-            <label>Getrennt</label>
+                <label for="Alias" > Alias:</label> <br>
+                <input type="text" id="alias" class="w3-input w3-border" > 
+                <br>
+                
+                <label for="Verbindungsstatus">Verbindungsstatus:</label> <br>
+                <input class="w3-radio" type="radio" name="connection" value="male" checked>
+                <label>Verbunden</label>
+                <input class="w3-radio" type="radio" name="connection" value="female">
+                <label>Getrennt</label>
+                <input class="w3-radio" type="radio" name="connection" value="female">
+                <label>beliebig</label>
+                <br>
+                <br>
 
+                <label for="Zertifikat">Zertifikat:</label> <br>
+                <select class="w3-select" name="zertifikat">
+                    <option value="" disabled selected>Zertifiakt auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">Zertifikat x</option>
+                    <option value="3">Zertifikat y</option>
+                </select> 
+                <br>
+                <label><i class="fas fa-calendar-alt"></i> Ablaufdatum bis: </label>
+                <input type="text" id="ablaufdatum" class="w3-input w3-border" > 
+                <br>
+
+                <label><i class="fas fa-network-wired"></i> VPN:</label>
+                <select class="w3-select" name="vpn">
+                    <option value="" disabled selected>VPN auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">VPN a</option>
+                    <option value="3">VPN b</option>
+                </select> 
+                <br>
+                <br>
+
+                <label>ID: </label>
+                <input type="text" id="id" class="w3-input w3-border" > 
+                <br>
+
+                <label><i class="fas fa-ship"></i> Port:</label>
+                <input type="text" id="port" class="w3-input w3-border" > 
+                <br>
+
+                <label>IP: </label>
+                <input type="text" id="ip" class="w3-input w3-border" > 
+                <br>
+
+            </form> 
 
         </fieldset>
         <div class= "w3-container w3-margin-top">
@@ -179,7 +218,7 @@
         <fieldset class="fs-centered">
             <form>
             <label for="Alias" > Alias:</label> <br>
-            <input type="text" id="username" class="w3-input" > <br>
+            <input type="text" id="alias" class="w3-input" > <br>
             </form>
             <p>Verbindungsstatus</p>
             <input class="w3-radio" type="radio" name="connection" value="male" checked>
