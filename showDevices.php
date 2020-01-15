@@ -22,7 +22,7 @@
         <h2>Übersicht über die Gateways</h2>
         <div class="w3-responsive">
         <table class="w3-table-all w3-hoverable">
-            <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat erneuern</th><th>Ablaufdatum</th></tr>
+            <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
             <?php
                     $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
                     if ($mysqli->connect_errno) {
@@ -38,7 +38,16 @@
                             if ($entry['state'] == 1){
                                 $state = "gw-connected";
                             }
-                            echo '<tr><td>'.$entry["id"].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button" style="border: black 0.5px solid">konfigurieren</button></td><td><button class="w3-button" style="border: black 0.5px solid">Erneuern</button></td><td>2020-01-20</td></tr>'; 
+                            echo '<tr><td>'.$entry['id'].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button w3-border" >konfigurieren</button></td>';
+                           
+                            
+                            if($entry['cert-date']<time()){
+                               echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> '. date('Y-m-d hh:mm', $entry['cert-date']) .'</button></td>';
+                            }else{
+                                echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen </button></td>';
+                            }
+                            
+                            echo '</tr>';
                         }
                     
                         /* free result set */
@@ -55,7 +64,4 @@
     <footer >
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
-    <script>
-        getRows();
-    </script>
 </body>
