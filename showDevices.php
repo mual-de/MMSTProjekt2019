@@ -42,9 +42,10 @@
                     $filter_active = false;
                     $where_select = "";
                     if(isset($_GET['alias'])){
-                        $filter_active = true;
-                        $where_select = "alias='".$_GET['alias']."'";
-
+                        if($_GET['alias'] != ''){
+                            $filter_active = true;
+                            $where_select = "alias='".$_GET['alias']."'";
+                        }
                     }
                     if(isset($_GET['state'])){
                         if($_GET['state'] != "-1"){
@@ -56,6 +57,7 @@
                     if($filter_active){
                         $query = $query.'WHERE '.$where_select;
                     }
+                    echo $query;
                     if ($result = $mysqli->query($query)) {
 
                         /* fetch object array */
