@@ -33,11 +33,29 @@
         <table class="w3-table-all w3-hoverable">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
             <?php
+
                     $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
                     if ($mysqli->connect_errno) {
                         die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
                     }
+
+                    $filter_active = false;
+                    $where_select = "";
+                    if(isset($_GET['alias'])){
+                        $filter_active = true;
+                        $where_select = "alias='".$_GET['alias']."'";
+
+                    }
+                    if(isset($_GET['state'])){
+                        if($_GET['state'] != "-1"){
+                            $filter_active = true;
+                            $where_select = $where_select." AND state='".$_GET['state']."'";
+                        }
+                    }
                     $query = "SELECT * FROM id12194802_mmst.gateways";
+                    if($filter_active){
+                        $query = $query.'WHERE '.$where_select;
+                    }
                     if ($result = $mysqli->query($query)) {
 
                         /* fetch object array */
