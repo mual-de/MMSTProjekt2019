@@ -37,8 +37,7 @@
 					$show_config_cols = true;
 					
 					if(isset($_POST['showCols'])){
-                        if($_GET['showCols'] != ''){
-                            $show_config_cols = true;
+                            $show_config_cols = false;
                         }
                     }
 					
