@@ -34,7 +34,7 @@
         <table class="w3-table-all w3-hoverable">
             <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
             <?php
-					$show_config_cols = false;
+					$show_config_cols = true;
 					
 					if(isset($_POST['showCols'])){
                         if($_GET['showCols'] != ''){
