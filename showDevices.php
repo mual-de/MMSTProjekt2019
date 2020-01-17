@@ -1,4 +1,4 @@
-﻿﻿<head>
+﻿﻿﻿<head>
     <title>Gateways</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,22 +34,23 @@
         <table class="w3-table-all w3-hoverable">
             <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
             <?php
-					if(isset($_POST['showCols'])){
-					    if($show_config_cols){
-                            $show_config_cols = !$_POST['test'];
+                    $show_config_cols = false;
+					if(isset($_POST['test'])){
+					    if($_POST['test']){
+                            $show_config_cols = false;
 					    } else {
-					        $show_config_cols = !$_POST['test'];
+					        $show_config_cols = true;
 					    }					    
                     }
                     
 					
 					if ($show_config_cols) {						
 						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>
-						<form action="" method="post"><input type="hidden" name="test" value="<?php echo $show_config_cols; ?>"><input type="submit" value="Konfiguration" name="showCols"></form>
-						</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>';
+						<form action="" method="post"><input type="hidden" name="test" value="exist"><input type="submit" value="Konfiguration"></form>
+						</th><th>VPN-Netzwerk</th><th>Port</th><th>Zertifikat</th></tr>';
 					} else {
 						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>
-						<form action="" method="post"><input type="hidden" name="test" value="<?php echo $show_config_cols; ?>"><input type="submit" value="Konfiguration" name="showCols"></form>
+						<form action="" method="post"><input type="hidden" name="test" value=""><input type="submit" value="Konfiguration"></form>
 						</th><th>Zertifikat</th></tr>';
 					}
 
@@ -78,8 +79,11 @@
 					
 					if(isset($_GET['vpn_network'])){
                         if($_GET['vpn_network'] != ''){
+							if($filter_active){
+                                $where_select = $where_select. " AND ";
+                            }
                             $filter_active = true;
-                            $where_select = "vpn-network LIKE'".$_GET['vpn_network']."'";
+                            $where_select = $where_select."vpn-network LIKE'".$_GET['vpn_network']."'";
                         }
                     }
 					
