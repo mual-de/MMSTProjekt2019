@@ -1,4 +1,4 @@
-<head>
+﻿<head>
     <title>Gateways</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,21 +25,28 @@
                 <legend>Filtern der Datenbank</legend>
                 Alias: <input type="text" name="alias"><br>
                 Status: <input type="number" min="-1" max ="1" default="-1" name="state"><br>
+				VPN-Netzwerk: <input type="text" name="vpn_network"><br>
                 <input type="submit" value="Filtern">
 
             </fieldset>
         </form>
         <div class="w3-responsive">
         <table class="w3-table-all w3-hoverable">
-            <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
+            <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
             <?php
+					$show_config_cols = true;
+					if($show_config_cols){						
+						<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>
+					} else {
+						<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
+					}
 
                     $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
                     if ($mysqli->connect_errno) {
                         die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
                     }
 
-                    $filter_active = false;
+                    $filter_active = false;					
                     $where_select = "";
                     if(isset($_GET['alias'])){
                         if($_GET['alias'] != ''){
@@ -71,6 +78,9 @@
                             }
                             echo '<tr><td>'.$entry['id'].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button w3-border" >konfigurieren</button></td>';
                            
+						    if ($show_config_cols) {
+								echo '<td>'.$entry['config-port'].'</td>'
+							}
                             
                             if($entry['cert-date']>=time()){
                                echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> '. date('Y-m-d h:m', $entry['cert-date']) .'</button></td>';
