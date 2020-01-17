@@ -36,9 +36,9 @@
             <?php
 					$show_config_cols = false;
 					if ($show_config_cols) {						
-						<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>
+						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>';
 					} else {
-						<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
+						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>';
 					}
 
                     $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
@@ -79,7 +79,7 @@
                             echo '<tr><td>'.$entry['id'].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button w3-border" >konfigurieren</button></td>';
                            
 						    if ($show_config_cols) {
-								echo '<td>'.$entry['config-port'].'</td>'
+								echo '<td>'.$entry['config-port'].'</td>';
 							}
                             
                             if($entry['cert-date']>=time()){
