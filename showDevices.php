@@ -34,8 +34,8 @@
         <table class="w3-table-all w3-hoverable">
             <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
             <?php
-					$show_config_cols = true;
-					if($show_config_cols){						
+					$show_config_cols = false;
+					if ($show_config_cols) {						
 						<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>
 					} else {
 						<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>
