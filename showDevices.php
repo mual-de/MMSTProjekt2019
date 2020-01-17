@@ -45,7 +45,7 @@
 					if ($show_config_cols) {						
 						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th><form action="showDevices.php" method="post"><input type="submit" value="Konfiguration" name="showCols"></form></th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>';
 					} else {
-						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr>';
+						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th><form action="showDevices.php" method="post"><input type="submit" value="Konfiguration" name="showCols"></form></th><th>Zertifikat</th></tr>';
 					}
 
                     $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
