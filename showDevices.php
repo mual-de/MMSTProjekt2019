@@ -105,7 +105,7 @@
                             echo '<tr><td>'.$entry['id'].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button w3-border" >konfigurieren</button></td>';
                            
 						    if ($show_config_cols) {
-								echo '<td>'.$entry['vpn-network'].'</td>';
+								echo '<td>'.$entry['vpn_network'].'</td>';
 								echo '<td>'.$entry['config-port'].'</td>';
 							}
                             
