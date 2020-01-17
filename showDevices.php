@@ -48,7 +48,9 @@
 						<form action="" method="post"><input type="hidden" name="test" value="<?php echo $show_config_cols; ?>"><input type="submit" value="Konfiguration" name="showCols"></form>
 						</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>';
 					} else {
-						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th><form action="" method="post"><input type="submit" value="Konfiguration" name="showCols"></form></th><th>Zertifikat</th></tr>';
+						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>
+						<form action="" method="post"><input type="hidden" name="test" value="<?php echo $show_config_cols; ?>"><input type="submit" value="Konfiguration" name="showCols"></form>
+						</th><th>Zertifikat</th></tr>';
 					}
 
                     $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
@@ -73,6 +75,16 @@
                             $where_select = $where_select." state='".$_GET['state']."'";
                         }
                     }
+					
+					if(isset($_GET['vpn_network'])){
+                        if($_GET['vpn_network'] != ''){
+                            $filter_active = true;
+                            $where_select = "vpn-network LIKE'".$_GET['vpn_network']."'";
+                        }
+                    }
+					
+					
+					
                     $query = "SELECT * FROM id12194802_mmst.gateways";
                     if($filter_active){
                         $query = $query.' WHERE '.$where_select;
@@ -89,6 +101,7 @@
                             echo '<tr><td>'.$entry['id'].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button w3-border" >konfigurieren</button></td>';
                            
 						    if ($show_config_cols) {
+								echo '<td>'.$entry['vpn-network'].'</td>';
 								echo '<td>'.$entry['config-port'].'</td>';
 							}
                             
