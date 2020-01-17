@@ -83,7 +83,7 @@
                                 $where_select = $where_select. " AND ";
                             }
                             $filter_active = true;
-                            $where_select = $where_select."vpn-network LIKE'".$_GET['vpn_network']."'";
+                            $where_select = $where_select."vpn_network LIKE'".$_GET['vpn_network']."'";
                         }
                     }
 					
