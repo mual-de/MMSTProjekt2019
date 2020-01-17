@@ -1,4 +1,4 @@
-﻿<head>
+﻿﻿<head>
     <title>Gateways</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,15 +34,19 @@
         <table class="w3-table-all w3-hoverable">
             <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
             <?php
-					$show_config_cols = true;
-					
 					if(isset($_POST['showCols'])){
-                            $show_config_cols = false;
-                        }
+					    if($show_config_cols){
+                            $show_config_cols = !$_POST['test'];
+					    } else {
+					        $show_config_cols = !$_POST['test'];
+					    }					    
                     }
+                    
 					
 					if ($show_config_cols) {						
-						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th><form action="" method="post"><input type="submit" value="Konfiguration" name="showCols"></form></th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>';
+						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>
+						<form action="" method="post"><input type="hidden" name="test" value="<?php echo $show_config_cols; ?>"><input type="submit" value="Konfiguration" name="showCols"></form>
+						</th><th>VPN-Netzwerk</th><th>Zertifikat</th></tr>';
 					} else {
 						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th><form action="" method="post"><input type="submit" value="Konfiguration" name="showCols"></form></th><th>Zertifikat</th></tr>';
 					}
