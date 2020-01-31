@@ -52,9 +52,15 @@
             <div class="w3-blue w3-hover-shadow w3-center">
                 <div class="w3-container w3-blue-grey w3-right">
                     <!-- Löschen -->
-                    <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                    <div class="w3-tooltip">
+                        <button class="w3-button"><i class="fas fa-trash-alt"></i></button>
+                        <div class="w3-text" style="position:absolute; background-color: grey;">Löschen</div>
+                    </div>
                     <!-- Bearbeiten -->
-                    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                    <div class="w3-tooltip">
+                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button"><i class="fas fa-pencil-alt"></i></button>
+                        <div class="w3-text" style="position:absolute; background-color: grey;">Bearbeiten</div>
+                    </div>
                 </div>
                 <div onclick="location.href='showDevices.html';">
                     <h2>Ausstehende Anfragen</h2>
@@ -133,7 +139,10 @@
 
         <!-- Hinzufügen-Button-->
         <div class="w3-third w3-container w3-center">
-            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-circle w3-large w3-blue">+</button>
+            <div class="w3-tooltip">
+                <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-circle w3-large w3-blue">+</button>
+                <div class="w3-text" style="position:absolute;">Filter hinzufügen</div>
+            </div>
         </div>
     </div> 
 
