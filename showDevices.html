@@ -30,7 +30,7 @@
         <div class="w3-responsive">
         <table class="w3-table-all" onload="getRows()">
             <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfig</th><th>Zertifikat</th></tr>
-            <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button w3-border" ><i class="fas fa-cogs"></i></button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2020-02-15</button></td></tr>
+            <tr><td>1</td><td><div class="gw-connected"></div></td><td>Demo Gateway 1</td><td><button class="w3-button w3-border" onclick="document.getElementById('konfig').style.display='block'"><i class="fas fa-cogs"></i></button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2020-02-15</button></td></tr>
             <tr><td>2</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 2</td><td><button class="w3-button w3-border"><i class="fas fa-cogs"></i></button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen</button></td></tr>
             <tr><td>3</td><td><div class="gw-connected"></div></td><td>Demo Gateway 3</td><td><button class="w3-button w3-border" ><i class="fas fa-cogs"></i></button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2020-08-10</button></td></tr>
             <tr><td>4</td><td><div class="gw-disconnected"></div></td><td>Demo Gateway 4</td><td><button class="w3-button w3-border"><i class="fas fa-cogs"></i></button></td><td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> 2021-01-01</button></td></tr>
@@ -39,6 +39,56 @@
         </div>
     </div>
 </div>
+
+
+<!-- Konfig-Fenster -->
+<div id="konfig" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('konfig').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Konfiguration Bearbeiten</h3>
+        <fieldset class="fs-centered">
+            <form>
+                <label for="Alias" > Alias:</label> <br>
+                <input type="text" id="alias" class="w3-input w3-border" > 
+                <br>
+
+                <label for="Zertifikat">Zertifikat:</label> <br>
+                <select class="w3-select" name="zertifikat">
+                    <option value="" disabled selected>Zertifiakt auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">Zertifikat x</option>
+                    <option value="3">Zertifikat y</option>
+                </select> 
+                <br>
+                <label><i class="fas fa-calendar-alt"></i> Ablaufdatum bis: </label>
+                <input type="text" id="ablaufdatum" class="w3-input w3-border" > 
+                <br>
+
+                <label><i class="fas fa-network-wired"></i> VPN:</label>
+                <select class="w3-select" name="vpn">
+                    <option value="" disabled selected>VPN auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">VPN a</option>
+                    <option value="3">VPN b</option>
+                </select> 
+                <br>
+                <br>
+
+                <label>Port:</label>
+                <input type="text" id="port" class="w3-input w3-border" > 
+                <br>
+
+            </form> 
+
+        </fieldset>
+        <div class= "w3-container w3-margin-top">
+            <button onclick="document.getElementById('konfig').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
+            <button onclick="document.getElementById('konfig').style.display='none'" class="w3-button w3-right w3-blue">Übernehmen</button>         
+        </div>
+      </div>
+    </div>
+  </div>
 
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2

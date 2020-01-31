@@ -10,14 +10,15 @@
 
 
 <body>
-    <nav>
-      <div class="w3-bar w3-blue">
-        <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
-        <a href="showDevices.html" class="w3-bar-item w3-button w3-mobile">Gateways</a>
-        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Login</a>
-		<a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
-      </div>
-    </nav>  
+  <div class="topnav" id="Topnav">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+    <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+    <a href="#" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
+    <a href="javascript:void(0);" class="icon" onclick="Navigation()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
 	
 	
     <article class="w3-margin">
@@ -28,9 +29,9 @@
 			<label> Max Mustermann</label> <br>
 			<label for="email" > Email address:</label>
 			<label> max.mustermann@gmx.de</label> <br>
-            <label for="password" class="w3-label">Passwort:</label> <br>           
+            <label for="password" class="w3-label">Passwort: *************</label> <br>           
             </form>
-            <button onclick="document.getElementById('konto').style.display='block'" class="w3-button w3-blue"> modify </Button> <br>
+            <button onclick="document.getElementById('konto').style.display='block'" class="w3-button w3-blue"> Bearbeiten </Button> <br>
         </fieldset>
     </article>
 	
@@ -43,9 +44,9 @@
 		<p>Hier können Kontodetails bearbeitet werden.</p>
         <fieldset class="fs-centered">
             <form>
-            <label for="username" > Username:</label> <br>
+            <label for="username" > Nutzername:</label> <br>
             <input type="text" id="username" class="w3-input" > <br>
-            <label for="email" class="w3-label"> Email address:</label> <br>
+            <label for="email" class="w3-label"> E-Mail:</label> <br>
             <input type="email" class="w3-input" ><br>
             </form>
         </fieldset>
@@ -60,4 +61,15 @@
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
+
+    <script>
+      function Navigation() {
+        var x = document.getElementById("Topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
 </body>

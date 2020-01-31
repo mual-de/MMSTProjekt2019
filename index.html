@@ -10,6 +10,7 @@
 
 
 <body class="">
+    <!-- 
     <nav>
         <div class="w3-bar w3-blue">
         <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
@@ -17,7 +18,18 @@
         <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
         <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
       </div>
-    </nav>        
+    </nav>  
+    -->
+    
+    <div class="topnav" id="Topnav">
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
+        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+        <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
+        <a href="javascript:void(0);" class="icon" onclick="Navigation()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
 <!-- Inhalt -->
 <div class="w3-main" style="margin:50px">
@@ -73,7 +85,7 @@
                         <div class="w3-col s6">
                             <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-times"></i></p>
                             <p> ID: <i class="fas fa-minus"></i></p>
-                            <p> <i class="fas fa-ship"></i> Port: <i class="fas fa-times"></i></p>
+                            <p> Port: <i class="fas fa-times"></i></p>
                             <p> IP: <i class="fas fa-times"></i></p>
                         </div>
                     </div>
@@ -196,7 +208,7 @@
                 <input type="text" id="id" class="w3-input w3-border" > 
                 <br>
 
-                <label><i class="fas fa-ship"></i> Port:</label>
+                <label>Port:</label>
                 <input type="text" id="port" class="w3-input w3-border" > 
                 <br>
 
@@ -249,4 +261,16 @@
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
+
+    <script>
+        function Navigation() {
+          var x = document.getElementById("Topnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+
 </body>
