@@ -14,8 +14,8 @@
         <div class="w3-bar w3-blue">
             <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
             <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
-            <a href="#" class="w3-bar-item w3-button w3-mobile">Einstellungen</a>
-            <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Login</a>
+            <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+            <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
       </div>
     </nav>
     <article class="w3-container w3-cell-middle w3-margin">
@@ -29,6 +29,7 @@
                 <input type="submit" value="Filtern">
 
             </fieldset>
+            <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         </form>
         <div class="w3-responsive">
         <table class="w3-table-all w3-hoverable">
@@ -127,7 +128,7 @@
         </table>
     </div>
     </article>
-    <footer >
+    <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
 </body>
