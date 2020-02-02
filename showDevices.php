@@ -1,4 +1,4 @@
-﻿﻿﻿<head>
+﻿﻿﻿﻿<head>
     <title>Gateways</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,18 @@
 
 
 <body>
+<<<<<<< HEAD
+    <div class="topnav" id="Topnav">
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
+        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
+        <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
+        <a href="javascript:void(0);" class="icon" onclick="Navigation()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <article class="w3-container w3-cell-middle">
+=======
     <nav>
         <div class="w3-bar w3-blue">
             <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
@@ -19,20 +31,70 @@
       </div>
     </nav>
     <article class="w3-container w3-cell-middle w3-margin">
+>>>>>>> 13b18eb656318a073635fde1292f35026740b2e4
         <h2>Übersicht über die Gateways</h2>
         <form action="showDevices.php" method="get">
             <fieldset>
                 <legend>Filtern der Datenbank</legend>
-                Alias: <input type="text" name="alias"><br>
-                Status: <input type="number" min="-1" max ="1" default="-1" name="state"><br>
-				VPN-Netzwerk: <input type="text" name="vpn_network"><br>
-                <input type="submit" value="Filtern">
+                <label for="Alias" > Alias:</label> <br>
+                <input type="text" id="alias" class="w3-input w3-border" > 
+                <br>
+                
+                <label for="Verbindungsstatus">Verbindungsstatus:</label> <br>
+                <input class="w3-radio" type="radio" name="state" value="1" checked>
+                <label>Verbunden</label>
+                <input class="w3-radio" type="radio" name="state" value="0">
+                <label>Getrennt</label>
+                <input class="w3-radio" type="radio" name="state" value="-1">
+                <label>beliebig</label>
+                <br>
+                <br>
 
+                <label for="Zertifikat">Zertifikat:</label> <br>
+                <select class="w3-select" name="zertifikat">
+                    <option value="" disabled selected>Zertifiakt auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">Zertifikat x</option>
+                    <option value="3">Zertifikat y</option>
+                </select> 
+                <br>
+                <label><i class="fas fa-calendar-alt"></i> Ablaufdatum bis: </label>
+                <input type="text" id="ablaufdatum" class="w3-input w3-border" > 
+                <br>
+
+                <label><i class="fas fa-network-wired"></i> VPN:</label>
+                <select class="w3-select" name="vpn_network">
+                    <option value="" disabled selected>VPN auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">VPN a</option>
+                    <option value="3">VPN b</option>
+                </select> 
+                <br>
+                <br>
+
+                <label>ID: </label>
+                <input type="text" id="id" class="w3-input w3-border" > 
+                <br>
+
+                <label><i class="fas"></i> Port:</label>
+                <input type="text" id="port" class="w3-input w3-border" > 
+                <br>
+
+                <label>IP: </label>
+                <input type="text" id="ip" class="w3-input w3-border" > 
+                <br>
+                <input type="submit" value="Filtern">
             </fieldset>
+<<<<<<< HEAD
+            </br>
+            <button class="w3-button w3-border" onclick="document.getElementById('konfig').style.display='block'" ><i class="fas fa-cogs"></i>
+                                        </button>
+=======
+>>>>>>> 13b18eb656318a073635fde1292f35026740b2e4
             <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         </form>
         <div class="w3-responsive">
-        <table class="w3-table-all w3-hoverable">
+        <table class="w3-table-all">
             <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
             <?php
                     $show_config_cols = false;
@@ -46,12 +108,12 @@
                     
 					
 					if ($show_config_cols) {						
-						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>
-						<form action="" method="post"><input type="hidden" name="test" value="exist"><input type="submit" value="Konfiguration"></form>
+						echo '<tr class="w3-blue"><th>Status</th><th>Alias</th><th>
+						<form action="" method="post"><input type="hidden" name="test" value="exist"><input type="submit" value="Config"></form>
 						</th><th>VPN-Netzwerk</th><th>Port</th><th>Zertifikat</th></tr>';
 					} else {
-						echo '<tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>
-						<form action="" method="post"><input type="hidden" name="test" value=""><input type="submit" value="Konfiguration"></form>
+						echo '<tr class="w3-blue"><th>Status</th><th>Alias</th><th>
+						<form action="" method="post"><input type="hidden" name="test" value=""><input type="submit" value="Config"></form>
 						</th><th>Zertifikat</th></tr>';
 					}
 
@@ -94,7 +156,7 @@
                     if($filter_active){
                         $query = $query.' WHERE '.$where_select;
                     }
-                    echo $query;
+                    #echo $query;
                     if ($result = $mysqli->query($query)) {
 
                         /* fetch object array */
@@ -103,7 +165,10 @@
                             if ($entry['state'] == 1){
                                 $state = "gw-connected";
                             }
-                            echo '<tr><td>'.$entry['id'].'</td><td><div class="'.$state.'"></div></td><td>'.$entry['alias'].'</td><td><button class="w3-button w3-border" >konfigurieren</button></td>';
+                            echo '<tr><td><div class="'.$state.'"></div></td>
+                                        <td>'.$entry['alias'].'</td>
+                                        <td><button class="w3-button w3-border" onclick="konfig_Window()" ><i class="fas fa-cogs"></i>
+                                        </button></td>';
                            
 						    if ($show_config_cols) {
 								echo '<td>'.$entry['vpn_network'].'</td>';
@@ -111,9 +176,9 @@
 							}
                             
                             if($entry['cert-date']>=time()){
-                               echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-alt"></i> '. date('Y-m-d h:m', $entry['cert-date']) .'</button></td>';
+                               echo '<td><button class="w3-button w3-border"  onclick="cert_date_Window()"><i class="fas fa-calendar-alt"></i> '. date('Y-m-d h:m', $entry['cert-date']) .'</button></td>';
                             }else{
-                                echo '<td><button class="w3-button w3-border"><i class="fas fa-calendar-times"></i> abgelaufen </button></td>';
+                                echo '<td><button class="w3-button w3-border w3-red"  onclick="cert_date_Window()"><i class="fas fa-calendar-times"></i> abgelaufen </button></td>';
                             }
                             
                             echo '</tr>';
@@ -128,6 +193,97 @@
         </table>
     </div>
     </article>
+<<<<<<< HEAD
+    
+    <script>
+       function konfig_Window() {
+           document.getElementById('konfig').style.display='block'
+       }
+       
+       function cert_date_Window() {
+           document.getElementById('cert-date').style.display='block'
+       }
+	   
+        function Navigation() {
+          var x = document.getElementById("Topnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    
+    <!-- Konfig-Fenster -->
+<div id="konfig" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('konfig').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Konfiguration Bearbeiten</h3>
+        <fieldset class="fs-centered">
+            <form>
+                <label for="Alias" > Alias:</label> <br>
+                <input type="text" id="alias" class="w3-input w3-border" > 
+                <br>
+
+                <label><i class="fas fa-network-wired"></i> VPN:</label>
+                <select class="w3-select" name="vpn">
+                    <option value="" disabled selected>VPN auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">VPN a</option>
+                    <option value="3">VPN b</option>
+                </select> 
+                <br>
+                <br>
+
+                <label>Port:</label>
+                <input type="text" id="port" class="w3-input w3-border" > 
+                <br>
+
+            </form> 
+
+        </fieldset>
+        <div class= "w3-container w3-margin-top">
+            <button onclick="document.getElementById('konfig').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
+            <button onclick="document.getElementById('konfig').style.display='none'" class="w3-button w3-right w3-blue">Übernehmen</button>         
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      <!-- Zertifikatsablaufdatum-Fenster -->
+<div id="cert-date" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('cert-date').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3>Konfiguration Bearbeiten</h3>
+        <fieldset class="fs-centered">
+            <form>
+                <label for="Zertifikat">Zertifikat:</label> <br>
+                <select class="w3-select" name="zertifikat">
+                    <option value="" disabled selected>Zertifiakt auswählen</option>
+                    <option value="1">beliebig</option>
+                    <option value="2">Zertifikat x</option>
+                    <option value="3">Zertifikat y</option>
+                </select> 
+                <br>
+                <label><i class="fas fa-calendar-alt"></i> Ablaufdatum bis: </label>
+                <input type="text" id="ablaufdatum" class="w3-input w3-border" > 
+                <br>
+                <br>
+            </form> 
+
+        </fieldset>
+        <div class= "w3-container w3-margin-top">
+            <button onclick="document.getElementById('cert-date').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
+            <button onclick="document.getElementById('cert-date').style.display='none'" class="w3-button w3-right w3-blue">Übernehmen</button>         
+        </div>
+      </div>
+    </div>
+  </div>
+    
+=======
+>>>>>>> 13b18eb656318a073635fde1292f35026740b2e4
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
