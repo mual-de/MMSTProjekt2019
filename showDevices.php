@@ -76,8 +76,6 @@
             </fieldset>
 
             </br>
-            <button class="w3-button w3-border" onclick="document.getElementById('konfig').style.display='block'" ><i class="fas fa-cogs"></i>
-                                        </button>
 
             <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         </form>
