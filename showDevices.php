@@ -11,7 +11,7 @@
 
 <body>
     <div class="topnav" id="Topnav">
-        <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
         <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
         <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
         <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
