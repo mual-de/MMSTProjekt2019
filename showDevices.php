@@ -10,7 +10,6 @@
 
 
 <body>
-<<<<<<< HEAD
     <div class="topnav" id="Topnav">
         <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
         <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
@@ -20,18 +19,8 @@
           <i class="fa fa-bars"></i>
         </a>
     </div>
-    <article class="w3-container w3-cell-middle">
-=======
-    <nav>
-        <div class="w3-bar w3-blue">
-            <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
-            <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
-            <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
-            <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
-      </div>
-    </nav>
+
     <article class="w3-container w3-cell-middle w3-margin">
->>>>>>> 13b18eb656318a073635fde1292f35026740b2e4
         <h2>Übersicht über die Gateways</h2>
         <form action="showDevices.php" method="get">
             <fieldset>
@@ -85,12 +74,11 @@
                 <br>
                 <input type="submit" value="Filtern">
             </fieldset>
-<<<<<<< HEAD
+
             </br>
             <button class="w3-button w3-border" onclick="document.getElementById('konfig').style.display='block'" ><i class="fas fa-cogs"></i>
                                         </button>
-=======
->>>>>>> 13b18eb656318a073635fde1292f35026740b2e4
+
             <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         </form>
         <div class="w3-responsive">
@@ -193,7 +181,6 @@
         </table>
     </div>
     </article>
-<<<<<<< HEAD
     
     <script>
        function konfig_Window() {
@@ -282,8 +269,6 @@
     </div>
   </div>
     
-=======
->>>>>>> 13b18eb656318a073635fde1292f35026740b2e4
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
