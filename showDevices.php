@@ -1,4 +1,4 @@
-﻿﻿﻿﻿<head>
+﻿﻿﻿<head>
     <title>Gateways</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
         <form action="showDevices.php" method="get">
             <fieldset>
                 <legend>Filtern der Datenbank</legend>
-                <label for="Alias" > Alias:</label> <br>
+                <label for="alias" > Alias:</label> <br>
                 <input type="text" id="alias" class="w3-input w3-border" > 
                 <br>
                 
