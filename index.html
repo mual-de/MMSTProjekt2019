@@ -22,10 +22,10 @@
     -->
     
     <div class="topnav" id="Topnav">
-        <a href="#" class="w3-bar-item w3-button w3-mobile">Home</a>
-        <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
-        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
-        <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
+        <a href="#" class="active">Home</a>
+        <a href="showDevices.php" >Gateways</a>
+        <a href="settings.html" >Konto</a>
+        <a href="login.html" >Logout</a>
         <a href="javascript:void(0);" class="icon" onclick="Navigation()">
           <i class="fa fa-bars"></i>
         </a>
@@ -112,13 +112,13 @@
                         <div class="w3-col s6">
                             <p> Alias: Maier%</p>
                             <p> Status: <i class="gw-connected"></i> </p>
-                            <p> Zertifikat: <i class="fas fa-times"></i></p>
+                            <p> Zertifikat: <i class="fas fa-minus"></i></p>
                         </div>
                         <div class="w3-col s6">
-                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-times"></i></p>
+                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-minus"></i></p>
                             <p> ID: <i class="fas fa-minus"></i></p>
-                            <p> Port: <i class="fas fa-times"></i></p>
-                            <p> IP: <i class="fas fa-times"></i></p>
+                            <p> Port: <i class="fas fa-minus"></i></p>
+                            <p> IP: <i class="fas fa-minus"></i></p>
                         </div>
                     </div>
                 </div>
@@ -139,18 +139,18 @@
                     </div>
                 </div>
                 <div onclick="location.href='showDevices.php?vpn_network=Google%';">
-                    <h2>Google</h2>
+                    <h2>Google nc</h2>
                     <div class="w3-row w3-padding"> 
                         <div class="w3-col s6">
                             <p> Alias: Google</p>
                             <p> Status: <i class="gw-disconnected"></i> </p>
-                            <p> Zertifikat: <i class="fas fa-times"></i></p>
+                            <p> Zertifikat: <i class="fas fa-minus"></i></p>
                         </div>
                         <div class="w3-col s6">
-                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-times"></i></p>
+                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-minus"></i></p>
                             <p> ID: <i class="fas fa-minus"></i></p>
-                            <p> Port: <i class="fas fa-times"></i></p>
-                            <p> IP: <i class="fas fa-times"></i></p>
+                            <p> Port: <i class="fas fa-minus"></i></p>
+                            <p> IP: <i class="fas fa-minus"></i></p>
                         </div>
                     </div>
                 </div>
@@ -175,19 +175,19 @@
                         <div class="w3-text" style="position:absolute; background-color: grey;">Bearbeiten</div>
                     </div>
                 </div>
-                <div onclick="location.href='showDevices.php';">
-                    <h2>Ausstehende Anfragen</h2>
+                <div onclick="location.href='showDevices.php?state=1';">
+                    <h2>verbundene Geräte</h2>
                     <div class="w3-row w3-padding"> 
                         <div class="w3-col s6">
                             <p> Alias: <i class="fas fa-minus"></i></p>
-                            <p> Status: <i class="gw-disconnected"></i> </p>
-                            <p> Zertifikat: <i class="fas fa-times"></i></p>
+                            <p> Status: <i class="gw-connected"></i> </p>
+                            <p> Zertifikat: <i class="fas fa-minus"></i></p>
                         </div>
                         <div class="w3-col s6">
-                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-times"></i></p>
+                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-minus"></i></p>
                             <p> ID: <i class="fas fa-minus"></i></p>
-                            <p> Port: <i class="fas fa-times"></i></p>
-                            <p> IP: <i class="fas fa-times"></i></p>
+                            <p> Port: <i class="fas fa-minus"></i></p>
+                            <p> IP: <i class="fas fa-minus"></i></p>
                         </div>
                     </div>
                 </div>
@@ -208,18 +208,18 @@
                     </div>
                 </div>
                 <div onclick="location.href='showDevices.php';">
-                    <h2>Ausstehende Anfragen</h2>
+                    <h2>Port 112</h2>
                     <div class="w3-row w3-padding"> 
                         <div class="w3-col s6">
                             <p> Alias: <i class="fas fa-minus"></i></p>
-                            <p> Status: <i class="gw-disconnected"></i> </p>
-                            <p> Zertifikat: <i class="fas fa-times"></i></p>
+                            <p> Status: <i class="fas fa-minus"></i> </p>
+                            <p> Zertifikat: <i class="fas fa-minus"></i></p>
                         </div>
                         <div class="w3-col s6">
-                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-times"></i></p>
+                            <p> <i class="fas fa-network-wired"></i> VPN: <i class="fas fa-minus"></i></p>
                             <p> ID: <i class="fas fa-minus"></i></p>
-                            <p> Port: <i class="fas fa-times"></i></p>
-                            <p> IP: <i class="fas fa-times"></i></p>
+                            <p> Port: 112</p>
+                            <p> IP: <i class="fas fa-minus"></i></p>
                         </div>
                     </div>
                 </div>

@@ -11,10 +11,10 @@
 
 <body>
     <div class="topnav" id="Topnav">
-        <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
-        <a href="showDevices.php" class="w3-bar-item w3-button w3-mobile">Gateways</a>
-        <a href="login.html" class="w3-bar-item w3-button w3-mobile w3-right">Logout</a>
-        <a href="settings.html" class="w3-bar-item w3-button w3-mobile w3-right">Konto</a>
+        <a href="index.html" >Home</a>
+        <a href="#" class="active">Gateways</a>
+        <a href="settings.html" >Konto</a>
+        <a href="login.html" >Logout</a>
         <a href="javascript:void(0);" class="icon" onclick="Navigation()">
           <i class="fa fa-bars"></i>
         </a>
@@ -266,6 +266,8 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
     
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
