@@ -103,7 +103,7 @@
 						</th><th>Zertifikat</th></tr>';
 					}
 
-                    $mysqli = new mysqli("localhost", "id12194802_tuddemo", "demo_tud_2020", "id12194802_mmst");
+                    $mysqli = new mysqli("localhost", "epiz_25157497", "8ISjRQHttm", "epiz_25157497_demommst");
                     if ($mysqli->connect_errno) {
                         die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
                     }
@@ -138,7 +138,7 @@
 					
 					
 					
-                    $query = "SELECT * FROM id12194802_mmst.gateways";
+                    $query = "SELECT * FROM epiz_25157497_demommst.gateways";
                     if($filter_active){
                         $query = $query.' WHERE '.$where_select;
                     }
