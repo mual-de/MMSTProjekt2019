@@ -103,7 +103,7 @@
 						</th><th>Zertifikat</th></tr>';
 					}
 
-                    $mysqli = new mysqli("localhost", "epiz_25157497", "8ISjRQHttm", "epiz_25157497_demommst");
+                    $mysqli = new mysqli("sql100.epizy.com", "epiz_25157497", "8ISjRQHttm", "epiz_25157497_demommst");
                     if ($mysqli->connect_errno) {
                         die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
                     }
