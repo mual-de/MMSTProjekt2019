@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/w3.css">
     <!-- Icons von FontAwesome -->
+    
     <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
 </head>
 
@@ -277,7 +278,7 @@
             x.style.display = "none";
           }
         }
-        
+
         function Navigation() {
           var x = document.getElementById("Topnav");
           if (x.className === "topnav") {
