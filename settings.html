@@ -11,10 +11,10 @@
 
 <body>
   <div class="topnav" id="Topnav">
-    <a href="index.html" >Home</a>
-    <a href="showDevices.php" >Gateways</a>
-    <a href="#" class="active">Konto</a>
-    <a href="login.html" >Logout</a>
+    <a href="index.html" class="btn">Home</a>
+    <a href="showDevices.php" class="btn" >Gateways</a>
+    <a href="#" class="active btn">Konto</a>
+    <a href="login.html" class="logutBtn">Logout</a>
     <a href="javascript:void(0);" class="icon" onclick="Navigation()">
       <i class="fa fa-bars"></i>
     </a>
@@ -70,6 +70,12 @@
         } else {
           x.className = "topnav";
         }
+        var y = document.getElementById("logout");
+        if (y.className === "logutBtn") {
+          y.className += " responsive";
+        } else {
+          y.className = "logutBtn";
+        }
       }
-      </script>
+  </script>
 </body>

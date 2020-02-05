@@ -10,11 +10,11 @@
 
 
 <body>
-    <div class="topnav" id="Topnav">
-        <a href="index.html" >Home</a>
-        <a href="#" class="active">Gateways</a>
-        <a href="settings.html" >Konto</a>
-        <a href="login.html" >Logout</a>
+<div class="topnav" id="Topnav">
+        <a href="index.html" class="btn">Home</a>
+        <a href="#" class="active btn" >Gateways</a>
+        <a href="settings.html" class="btn">Konto</a>
+        <a href="login.html" class="logutBtn" id="logout" >Logout</a>
         <a href="javascript:void(0);" class="icon" onclick="Navigation()">
           <i class="fa fa-bars"></i>
         </a>
@@ -277,13 +277,19 @@
             x.style.display = "none";
           }
         }
-
+        
         function Navigation() {
           var x = document.getElementById("Topnav");
           if (x.className === "topnav") {
             x.className += " responsive";
           } else {
             x.className = "topnav";
+          }
+          var y = document.getElementById("logout");
+          if (y.className === "logutBtn") {
+            y.className += " responsive";
+          } else {
+            y.className = "logutBtn";
           }
         }
     </script>
