@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/w3.css">
-    <!-- Icons von FontAwesome -->
-
     <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="topnav" id="Topnav">
+    <div class="topnav" id="Topnav">
         <a href="index.html" class="btn">Home</a>
         <a href="#" class="active btn" >Gateways</a>
         <a href="settings.html" class="btn">Konto</a>

@@ -1,83 +1,89 @@
 <html>
+
 <head>
-    <title>Kontoeinstellungen</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/w3.css">
-    <!-- Icons von FontAwesome -->
-    <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
+  <title>Kontoeinstellungen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <!-- Icons von FontAwesome -->
+  <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
   <div class="topnav" id="Topnav">
     <a href="index.html" class="btn">Home</a>
-    <a href="showDevices.php" class="btn" >Gateways</a>
+    <a href="showDevices.php" class="btn">Gateways</a>
     <a href="#" class="active btn">Konto</a>
     <a href="login.html" class="logutBtn">Logout</a>
     <a href="javascript:void(0);" class="icon" onclick="Navigation()">
       <i class="fa fa-bars"></i>
     </a>
-</div>
-	
-	
-    <article class="w3-margin">
-        <h2>Kontoeinstellungen</h2>
-        <fieldset class="fs-centered">
-            <form>
-            <label for="username" > Username:</label>
-			<label> Max Mustermann</label> <br>
-			<label for="email" > Email address:</label>
-			<label> max.mustermann@gmx.de</label> <br>
-            <label for="password" class="w3-label">Passwort: *************</label> <br>           
-            </form>
-            <button onclick="document.getElementById('konto').style.display='block'" class="w3-button w3-blue"> Bearbeiten </Button> <br>
-        </fieldset>
-    </article>
-	
-	<!-- neuer Shortcut-Fenster -->
+  </div>
+
+
+  <article class="w3-margin">
+    <h2>Kontoeinstellungen</h2>
+    <fieldset class="fs-centered">
+      <form>
+        <label for="username"> Username:</label>
+        <label> Max Mustermann</label> <br>
+        <label for="email"> Email address:</label>
+        <label> max.mustermann@gmx.de</label> <br>
+        <label for="password" class="w3-label">Passwort: *************</label> <br>
+      </form>
+      <button onclick="document.getElementById('konto').style.display='block'" class="w3-button w3-blue"> Bearbeiten
+      </Button> <br>
+    </fieldset>
+  </article>
+
+  <!-- neuer Shortcut-Fenster -->
   <div id="konto" class="w3-modal">
     <div class="w3-modal-content">
       <div class="w3-container">
-        <span onclick="document.getElementById('konto').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
+        <span onclick="document.getElementById('konto').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
         <h2>Konto bearbeiten</h2>
-		<p>Hier können Kontodetails bearbeitet werden.</p>
+        <p>Hier können Kontodetails bearbeitet werden.</p>
         <fieldset class="fs-centered">
-            <form>
-            <label for="username" > Nutzername:</label> <br>
-            <input type="text" id="username" class="w3-input" > <br>
+          <form>
+            <label for="username"> Nutzername:</label> <br>
+            <input type="text" id="username" class="w3-input"> <br>
             <label for="email" class="w3-label"> E-Mail:</label> <br>
-            <input type="email" class="w3-input" ><br>
-            </form>
+            <input type="email" class="w3-input"><br>
+          </form>
         </fieldset>
-        <div class= "w3-container w3-margin-top">
-            <button onclick="document.getElementById('konto').style.display='none'" class="w3-button w3-right w3-blue">Abbrechen</button>
-            <button onclick="document.getElementById('konto').style.display='none'" class="w3-button w3-right w3-blue">Übernehmen</button>         
+        <div class="w3-container w3-margin-top">
+          <button onclick="document.getElementById('konto').style.display='none'"
+            class="w3-button w3-right w3-blue">Abbrechen</button>
+          <button onclick="document.getElementById('konto').style.display='none'"
+            class="w3-button w3-right w3-blue">Übernehmen</button>
         </div>
       </div>
     </div>
   </div>
-	
-    <footer class="w3-white">
-        MMST Projekt 2019 - Gruppe 2.2
-    </footer>
 
-    <script>
-      function Navigation() {
-        var x = document.getElementById("Topnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-        var y = document.getElementById("logout");
-        if (y.className === "logutBtn") {
-          y.className += " responsive";
-        } else {
-          y.className = "logutBtn";
-        }
+  <footer class="w3-white">
+    MMST Projekt 2019 - Gruppe 2.2
+  </footer>
+
+  <script>
+    function Navigation() {
+      var x = document.getElementById("Topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
       }
+      var y = document.getElementById("logout");
+      if (y.className === "logutBtn") {
+        y.className += " responsive";
+      } else {
+        y.className = "logutBtn";
+      }
+    }
   </script>
 </body>
+
 </html>
