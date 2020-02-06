@@ -22,7 +22,9 @@
 
     <article class="w3-container w3-cell-middle w3-margin">
         <h2>Übersicht über die Gateways</h2>
-        <form action="showDevices.php" method="get">
+
+        <button onclick="Filter()" class="w3-button w3-blue"><i class="fas fa-search"></i> Datenbank filtern</button>
+        <form id="filter" action="showDevices.php" method="get"> 
             <fieldset>
                 <legend>Filtern der Datenbank</legend>
                 <label for="alias" > Alias:</label> <br>
@@ -72,13 +74,15 @@
                 <label>IP: </label>
                 <input type="text" id="ip" class="w3-input w3-border" > 
                 <br>
-                <input type="submit" value="Filtern">
+                <input class="w3-button w3-blue" type="submit" value="Filtern">
             </fieldset>
 
             </br>
 
             <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
         </form>
+
+
         <div class="w3-responsive">
         <table class="w3-table-all">
             <!-- <tr class="w3-blue"><th>id</th><th>Status</th><th>Alias</th><th>Konfiguration</th><th>Zertifikat</th></tr> -->
@@ -188,15 +192,6 @@
        function cert_date_Window() {
            document.getElementById('cert-date').style.display='block'
        }
-	   
-        function Navigation() {
-          var x = document.getElementById("Topnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
     </script>
     
     <!-- Konfig-Fenster -->
@@ -272,4 +267,24 @@
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
+
+    <script>
+        function Filter() {
+          var x = document.getElementById("filter");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+
+        function Navigation() {
+          var x = document.getElementById("Topnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
 </body>

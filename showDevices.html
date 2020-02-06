@@ -24,6 +24,66 @@
 <!-- Inhalt -->
 <div class="w3-main" style="margin:10px">   
 
+
+<button onclick="Filter()" class="w3-button w3-blue"><i class="fas fa-search"></i> Datenbank filtern</button>
+    <form id="filter" action="showDevices.php" method="get"> 
+        <fieldset>
+            <legend>Filtern der Datenbank</legend>
+            <label for="alias" > Alias:</label> <br>
+            <input type="text" id="alias" class="w3-input w3-border" > 
+            <br>
+            
+            <label for="Verbindungsstatus">Verbindungsstatus:</label> <br>
+            <input class="w3-radio" type="radio" name="state" value="1" checked>
+            <label>Verbunden</label>
+            <input class="w3-radio" type="radio" name="state" value="0">
+            <label>Getrennt</label>
+            <input class="w3-radio" type="radio" name="state" value="-1">
+            <label>beliebig</label>
+            <br>
+            <br>
+
+            <label for="Zertifikat">Zertifikat:</label> <br>
+            <select class="w3-select" name="zertifikat">
+                <option value="" disabled selected>Zertifiakt auswählen</option>
+                <option value="1">beliebig</option>
+                <option value="2">Zertifikat x</option>
+                <option value="3">Zertifikat y</option>
+            </select> 
+            <br>
+            <label><i class="fas fa-calendar-alt"></i> Ablaufdatum bis: </label>
+            <input type="text" id="ablaufdatum" class="w3-input w3-border" > 
+            <br>
+
+            <label><i class="fas fa-network-wired"></i> VPN:</label>
+            <select class="w3-select" name="vpn_network">
+                <option value="" disabled selected>VPN auswählen</option>
+                <option value="1">beliebig</option>
+                <option value="2">VPN a</option>
+                <option value="3">VPN b</option>
+            </select> 
+            <br>
+            <br>
+
+            <label>ID: </label>
+            <input type="text" id="id" class="w3-input w3-border" > 
+            <br>
+
+            <label><i class="fas"></i> Port:</label>
+            <input type="text" id="port" class="w3-input w3-border" > 
+            <br>
+
+            <label>IP: </label>
+            <input type="text" id="ip" class="w3-input w3-border" > 
+            <br>
+            <input class="w3-button w3-blue" type="submit" value="Filtern">
+        </fieldset>
+
+        </br>
+
+        <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
+    </form>
+
     <div class="w3-container w3-margin">
         <h2>Übersicht über die Gateways</h2>
         <button class="w3-button w3-blue"><i class="far fa-save"></i> Filtereinstellung speichern</button>
@@ -93,6 +153,18 @@
     <footer class="w3-white">
         MMST Projekt 2019 - Gruppe 2.2
     </footer>
+
+    <script>
+        function Filter() {
+          var x = document.getElementById("filter");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+
     <script>
         getRows();
     </script>
