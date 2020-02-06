@@ -1,15 +1,14 @@
-﻿﻿﻿<head>
+﻿﻿<html>
+<head>
     <title>Gateways</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/w3.css">
     <!-- Icons von FontAwesome -->
-    
+
     <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
 </head>
-
-
 <body>
 <div class="topnav" id="Topnav">
         <a href="index.html" class="btn">Home</a>
@@ -19,7 +18,7 @@
         <a href="javascript:void(0);" class="icon" onclick="Navigation()">
           <i class="fa fa-bars"></i>
         </a>
-    </div>
+</div>
 
     <article class="w3-container w3-cell-middle w3-margin">
         <h2>Übersicht über die Gateways</h2>
@@ -295,3 +294,4 @@
         }
     </script>
 </body>
+</html>
