@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/w3.css">
     <script src="https://kit.fontawesome.com/c1909a32ba.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="">
     <div class="topnav" id="Topnav">
         <a href="index.html" class="btn">Home</a>
         <a href="#" class="active btn" >Gateways</a>
@@ -16,7 +16,7 @@
         <a href="javascript:void(0);" class="icon" onclick="Navigation()">
           <i class="fa fa-bars"></i>
         </a>
-</div>
+	</div>
 
     <article class="w3-container w3-cell-middle w3-margin">
         <h2>Übersicht über die Gateways</h2>
