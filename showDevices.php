@@ -22,7 +22,7 @@
         <h2>Übersicht über die Gateways</h2> 
 
         <button onclick="Filter()" class="w3-button w3-blue"><i class="fas fa-search"></i> Datenbank filtern</button>
-        <form id="filter" action="showDevices.php" method="get"> 
+        <form id="filter" style="display:none" action="showDevices.php" method="get"> 
             <fieldset>
                 <legend>Filtern der Datenbank</legend>
                 <label for="alias" > Alias:</label> <br>
