@@ -19,7 +19,7 @@
 	</div>
 
     <article class="w3-container w3-cell-middle w3-margin">
-        <h2>Übersicht über die Gateways</h2>
+       <!-- <h2>Übersicht über die Gateways</h2> -->
 
         <button onclick="Filter()" class="w3-button w3-blue"><i class="fas fa-search"></i> Datenbank filtern</button>
         <form id="filter" action="showDevices.php" method="get"> 
