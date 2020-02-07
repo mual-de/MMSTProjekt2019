@@ -97,11 +97,11 @@
 					
 					if ($show_config_cols) {						
 						echo '<tr class="w3-blue"><th>Status</th><th>Alias</th><th>
-						<form action="" method="post"><input type="hidden" name="test" value="exist"><input type="submit" value="Config"></form>
+						<form action="" method="post"><input type="hidden" name="test" value="exist"><input class="w3-button w3-grey" type="submit" value="Config"></form>
 						</th><th>VPN-Netzwerk</th><th>Port</th><th>Zertifikat</th></tr>';
 					} else {
 						echo '<tr class="w3-blue"><th>Status</th><th>Alias</th><th>
-						<form action="" method="post"><input type="hidden" name="test" value=""><input type="submit" value="Config"></form>
+						<form action="" method="post"><input type="hidden" name="test" value=""><input class="w3-button w3-grey" type="submit" value="Config"></form>
 						</th><th>Zertifikat</th></tr>';
 					}
 
